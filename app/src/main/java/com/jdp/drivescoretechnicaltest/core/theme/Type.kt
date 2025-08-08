@@ -1,4 +1,4 @@
-package com.jdp.drivescoretechnicaltest.ui.theme
+package com.jdp.drivescoretechnicaltest.core.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
