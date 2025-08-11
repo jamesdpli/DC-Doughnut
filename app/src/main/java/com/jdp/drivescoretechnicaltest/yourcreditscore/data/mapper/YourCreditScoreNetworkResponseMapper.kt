@@ -6,9 +6,13 @@ import javax.inject.Inject
 
 class YourCreditScoreNetworkResponseMapper @Inject constructor() {
 
-    fun map(networkResponse: YourCreditScoreNetworkResponse): YourCreditScoreDomainModel =
+    fun map(networkResponse: YourCreditScoreNetworkResponse): YourCreditScoreDomainModel = with(
+        receiver = networkResponse
+    ) {
         YourCreditScoreDomainModel(
-            creditScore = networkResponse.creditReportInfo.score
+            creditScore = creditReportInfo.score.toDouble(),
+            maxCreditScore = creditReportInfo.maxScoreValue.toDouble()
         )
+    }
 
 }

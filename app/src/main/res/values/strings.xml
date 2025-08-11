@@ -1,3 +1,9 @@
 <resources>
+    <!--  Core  -->
     <string name="app_name">DriveScoreTechnicalTest</string>
+
+    <!--  Your credit score  -->
+    <string name="your_credit_score_top_app_bar_title">Your credit score</string>
+    <string name="your_credit_score_doughnut_title">Your credit score is</string>
+    <string name="your_credit_score_doughnut_score_total">Out of %1$s </string>
 </resources>
