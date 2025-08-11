@@ -1,5 +1,6 @@
-package com.jdp.drivescoretechnicaltest.yourcreditscore.domain
+package com.jdp.drivescoretechnicaltest.yourcreditscore.domain.usecase
 
+import com.jdp.drivescoretechnicaltest.yourcreditscore.domain.repository.YourCreditScoreRepository
 import javax.inject.Inject
 
 class GetCreditScoreUseCase @Inject constructor(

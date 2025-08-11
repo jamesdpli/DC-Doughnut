@@ -1,6 +1,6 @@
-package com.jdp.drivescoretechnicaltest.yourcreditscore.ui
+package com.jdp.drivescoretechnicaltest.yourcreditscore.ui.state
 
-import com.jdp.drivescoretechnicaltest.yourcreditscore.domain.YourCreditScoreDomainModel
+import com.jdp.drivescoretechnicaltest.yourcreditscore.domain.model.YourCreditScoreDomainModel
 
 sealed interface YourCreditScoreUIState {
     data object Loading : YourCreditScoreUIState

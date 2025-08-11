@@ -1,10 +1,11 @@
-package com.jdp.drivescoretechnicaltest.yourcreditscore.data
+package com.jdp.drivescoretechnicaltest.yourcreditscore.data.repository
 
 import com.jdp.drivescoretechnicaltest.core.network.Resource
 import com.jdp.drivescoretechnicaltest.core.network.safeApiCall
 import com.jdp.drivescoretechnicaltest.core.network.service.YourCreditScoreService
-import com.jdp.drivescoretechnicaltest.yourcreditscore.domain.YourCreditScoreDomainModel
-import com.jdp.drivescoretechnicaltest.yourcreditscore.domain.YourCreditScoreRepository
+import com.jdp.drivescoretechnicaltest.yourcreditscore.data.mapper.YourCreditScoreNetworkResponseMapper
+import com.jdp.drivescoretechnicaltest.yourcreditscore.domain.model.YourCreditScoreDomainModel
+import com.jdp.drivescoretechnicaltest.yourcreditscore.domain.repository.YourCreditScoreRepository
 import javax.inject.Inject
 
 class YourCreditScoreRepositoryImpl @Inject constructor(

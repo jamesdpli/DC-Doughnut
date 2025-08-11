@@ -13,12 +13,17 @@ import javax.inject.Singleton
 @Module
 @InstallIn(value = [SingletonComponent::class])
 object NetworkModule {
+
+    @Provides
+    @Singleton
+    fun provideMoshi(): Moshi = Moshi.Builder().build()
+
     @Provides
     @Singleton
     fun provideRetrofit(moshi: Moshi): Retrofit = Retrofit
         .Builder()
         .baseUrl("https://android-interview.s3.eu-west-2.amazonaws.com/")
-        .addConverterFactory(MoshiConverterFactory.create())
+        .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
 
     @Provides

@@ -1,9 +1,10 @@
-package com.jdp.drivescoretechnicaltest.yourcreditscore.ui
+package com.jdp.drivescoretechnicaltest.yourcreditscore.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jdp.drivescoretechnicaltest.core.network.Resource
-import com.jdp.drivescoretechnicaltest.yourcreditscore.domain.GetCreditScoreUseCase
+import com.jdp.drivescoretechnicaltest.yourcreditscore.domain.usecase.GetCreditScoreUseCase
+import com.jdp.drivescoretechnicaltest.yourcreditscore.ui.state.YourCreditScoreUIState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
