@@ -4,7 +4,10 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import com.jdp.drivescoretechnicaltest.R
 
 @Composable
@@ -12,7 +15,12 @@ import com.jdp.drivescoretechnicaltest.R
 fun YourCreditScoreTopAppBar() {
     TopAppBar(
         title = {
-            Text(text = stringResource(id = R.string.your_credit_score_top_app_bar_title))
+            Text(
+                text = stringResource(id = R.string.your_credit_score_top_app_bar_title),
+                modifier = Modifier.semantics {
+                    heading()
+                }
+            )
         }
     )
 }

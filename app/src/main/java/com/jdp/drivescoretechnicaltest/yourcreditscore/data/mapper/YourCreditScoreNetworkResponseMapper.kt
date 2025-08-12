@@ -10,8 +10,8 @@ class YourCreditScoreNetworkResponseMapper @Inject constructor() {
         receiver = networkResponse
     ) {
         YourCreditScoreDomainModel(
-            creditScore = creditReportInfo.score.toDouble(),
-            maxCreditScore = creditReportInfo.maxScoreValue.toDouble()
+            creditScore = creditReportInfo.score,
+            maxCreditScore = creditReportInfo.maxScoreValue
         )
     }
 

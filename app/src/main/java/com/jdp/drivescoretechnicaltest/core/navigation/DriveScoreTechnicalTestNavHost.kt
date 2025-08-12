@@ -26,7 +26,10 @@ fun DriveScoreTechnicalTestNavHost(
             val viewModel: YourCreditScoreViewModel = hiltViewModel()
             val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
-            YourCreditScoreScreen(uiState = uiState)
+            YourCreditScoreScreen(
+                uiState = uiState,
+                intentHandler = viewModel::handleIntent
+            )
         }
     }
 }

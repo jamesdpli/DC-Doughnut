@@ -1,9 +1,12 @@
 <resources>
     <!--  Core  -->
     <string name="app_name">DriveScoreTechnicalTest</string>
+    <string name="try_again_button_title">Try again</string>
 
     <!--  Your credit score  -->
     <string name="your_credit_score_top_app_bar_title">Your credit score</string>
     <string name="your_credit_score_doughnut_title">Your credit score is</string>
     <string name="your_credit_score_doughnut_score_total">Out of %1$s </string>
+    <string name="your_credit_score_error_message">Sorry we could not get your credit score, please try again.</string>
+    <string name="your_credit_score_accessibility_doughnut">Your credit score is %1$s out of %2$s</string>
 </resources>
