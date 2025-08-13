@@ -1,4 +1,4 @@
-﻿# Drive Score Technical Test - Android
+# Drive Score Technical Test - Android
 
 ## Overview
 
@@ -75,7 +75,7 @@ These commands will execute all tests for the debug variant.
 ## Notes
 
 - Fully reactive **MVI architecture** ensures a clean and maintainable codebase.
-- All scenarios, including loading, error, and empty states, are thoroughly tested.
+- All scenarios, including loading, error, and success states, are thoroughly tested.
 - I have added custom accessibility for the Doughnut composable in [YourCreditScoreSuccessScreen.kt](app/src/main/java/com/jdp/drivescoretechnicaltest/yourcreditscore/ui/composable/YourCreditScoreSuccessScreen.kt). I have tested the correct accessibility string is formed in the UI test section.
 - I have added a workflow file that runs unit and UI tests automatically.
   
