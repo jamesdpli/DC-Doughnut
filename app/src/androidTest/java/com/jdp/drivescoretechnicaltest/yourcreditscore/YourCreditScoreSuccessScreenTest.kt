@@ -49,6 +49,6 @@ class YourCreditScoreSuccessScreenTest {
         const val YOUR_CREDIT_SCORE = "100"
         const val MAX_CREDIT_SCORE = "100"
         const val DOUGHNUT_SWEEP_ANGLE = 360f
-        const val YOUR_CREDIT_SCORE_TOTAL_EXPECTED_VALUE = "Out of 100"
+        const val YOUR_CREDIT_SCORE_TOTAL_EXPECTED_VALUE = "out of 100"
     }
 }

@@ -1,6 +1,7 @@
 package com.jdp.drivescoretechnicaltest.core.network.di
 
 import com.jdp.drivescoretechnicaltest.core.network.service.YourCreditScoreService
+import com.jdp.drivescoretechnicaltest.core.network.util.NetworkConstant
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -22,7 +23,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofit(moshi: Moshi): Retrofit = Retrofit
         .Builder()
-        .baseUrl("https://android-interview.s3.eu-west-2.amazonaws.com/")
+        .baseUrl(NetworkConstant.YOUR_CREDIT_SCORE_BASE_URL)
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
 

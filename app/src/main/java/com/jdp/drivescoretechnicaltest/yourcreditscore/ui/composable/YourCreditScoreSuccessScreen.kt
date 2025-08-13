@@ -45,14 +45,6 @@ fun YourCreditScoreSuccessScreen(
 private fun Doughnut(
     uiState: YourCreditScoreUIState.Success
 ) = with(receiver = uiState.data) {
-
-    val canvasRotation = 180f
-    val fullArcSweepAngle = 360f
-    val arcStartAngle = 0f
-    val innerArcInset = 30f
-    val outerArcStrokeWidth = 10f
-    val innerArcStrokeWidth = 16f
-
     val doughnutAccessibilityDescription = stringResource(
         id = R.string.your_credit_score_accessibility_doughnut,
         formatArgs = arrayOf(
@@ -75,16 +67,16 @@ private fun Doughnut(
                 .fillMaxSize()
                 .invisibleToUser(mergeDescendants = true)
         ) {
-            rotate(degrees = canvasRotation) {
+            rotate(degrees = DoughnutDefaults.CANVAS_ROTATION) {
                 drawArc(
                     color = Color.Gray,
-                    startAngle = arcStartAngle,
-                    sweepAngle = fullArcSweepAngle,
+                    startAngle = DoughnutDefaults.ARC_START_ANGLE,
+                    sweepAngle = DoughnutDefaults.FULL_ARC_SWEEP_ANGLE,
                     useCenter = false,
-                    style = Stroke(width = outerArcStrokeWidth)
+                    style = Stroke(width = DoughnutDefaults.OUTER_ARC_STROKE_WIDTH)
 
                 )
-                inset(inset = innerArcInset) {
+                inset(inset = DoughnutDefaults.INNER_ARC_INSET) {
                     drawArc(
                         brush = Brush.sweepGradient(
                             colors = listOf(
@@ -93,10 +85,13 @@ private fun Doughnut(
                                 Color.Green
                             )
                         ),
-                        startAngle = arcStartAngle,
+                        startAngle = DoughnutDefaults.ARC_START_ANGLE,
                         sweepAngle = doughnutSweepAngle,
                         useCenter = false,
-                        style = Stroke(width = innerArcStrokeWidth, cap = StrokeCap.Butt)
+                        style = Stroke(
+                            width = DoughnutDefaults.INNER_ARC_STROKE_WIDTH,
+                            cap = StrokeCap.Butt
+                        )
                     )
                 }
             }
@@ -133,4 +128,13 @@ private fun DonutInformation(
             modifier = Modifier.invisibleToUser()
         )
     }
+}
+
+private object DoughnutDefaults {
+    const val CANVAS_ROTATION = 180f
+    const val FULL_ARC_SWEEP_ANGLE = 360f
+    const val ARC_START_ANGLE = 0f
+    const val INNER_ARC_INSET = 30f
+    const val OUTER_ARC_STROKE_WIDTH = 10f
+    const val INNER_ARC_STROKE_WIDTH = 16f
 }

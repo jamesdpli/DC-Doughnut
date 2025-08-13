@@ -37,7 +37,7 @@ fun YourCreditScoreErrorScreen(
         ) {
             Text(
                 text = stringResource(id = R.string.your_credit_score_error_message),
-                modifier = Modifier.padding(all= 16.dp)
+                modifier = Modifier.padding(all = 16.dp)
             )
         }
         Button(
