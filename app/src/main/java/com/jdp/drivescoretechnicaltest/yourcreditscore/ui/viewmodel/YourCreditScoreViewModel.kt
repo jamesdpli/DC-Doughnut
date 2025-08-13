@@ -14,7 +14,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 sealed interface YourCreditScoreIntent {
-    data object OnTryAgainClick : YourCreditScoreIntent
+    data object Load : YourCreditScoreIntent
+    data object Refresh : YourCreditScoreIntent
 }
 
 sealed interface YourCreditScoreUIState {
@@ -34,12 +35,9 @@ class YourCreditScoreViewModel @Inject constructor(
     )
     val uiState = _uiState.asStateFlow()
 
-    init {
-        getCreditScore()
-    }
-
     fun handleIntent(intent: YourCreditScoreIntent) = when (intent) {
-        is YourCreditScoreIntent.OnTryAgainClick -> {
+        YourCreditScoreIntent.Load,
+        YourCreditScoreIntent.Refresh -> {
             getCreditScore()
         }
     }

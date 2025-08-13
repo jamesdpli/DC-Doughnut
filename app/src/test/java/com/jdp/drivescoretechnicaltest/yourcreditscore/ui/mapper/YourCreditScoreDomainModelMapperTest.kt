@@ -10,7 +10,7 @@ class YourCreditScoreDomainModelMapperTest {
     private val mapper = YourCreditScoreDomainModelMapper()
 
     @Test
-    fun `GIVEN x WHEN y THEN z`() {
+    fun `GIVEN a domain model WHEN map THEN expect a UI model returned`() {
         val domainModel = YourCreditScoreDomainModel(
             creditScore = YOUR_CREDIT_SCORE,
             maxCreditScore = MAX_CREDIT_SCORE

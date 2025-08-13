@@ -19,7 +19,10 @@ class GetCreditScoreUseCaseTest {
 
     private val repository: YourCreditScoreRepository = mockk()
 
+    private val exception = IOException()
+
     private val useCase = GetCreditScoreUseCase(repository = repository)
+
 
     @Test
     @Parameters(method = "getParamsForUseCaseTest")
@@ -61,6 +64,5 @@ class GetCreditScoreUseCaseTest {
     private companion object {
         const val YOUR_CREDIT_SCORE = 100
         const val MAX_CREDIT_SCORE = 100
-        val exception = IOException()
     }
 }

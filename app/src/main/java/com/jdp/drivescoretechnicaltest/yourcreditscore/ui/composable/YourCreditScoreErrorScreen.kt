@@ -37,7 +37,7 @@ fun YourCreditScoreErrorScreen(
             )
         }
         Button(
-            onClick = { intentHandler(YourCreditScoreIntent.OnTryAgainClick) },
+            onClick = { intentHandler(YourCreditScoreIntent.Refresh) },
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(text = stringResource(id = R.string.try_again_button_title))
