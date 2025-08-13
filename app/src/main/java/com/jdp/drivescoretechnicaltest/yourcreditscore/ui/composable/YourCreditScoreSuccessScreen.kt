@@ -96,12 +96,12 @@ private fun Doughnut(
                 }
             }
         }
-        DonutInformation(uiState = uiState)
+        DoughnutInformation(uiState = uiState)
     }
 }
 
 @Composable
-private fun DonutInformation(
+private fun DoughnutInformation(
     uiState: YourCreditScoreUIState.Success
 ) = with(receiver = uiState.data) {
     Column(
