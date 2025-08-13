@@ -16,15 +16,16 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.inset
 import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.invisibleToUser
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.jdp.drivescoretechnicaltest.R
 import com.jdp.drivescoretechnicaltest.core.theme.Typography
 import com.jdp.drivescoretechnicaltest.core.util.invisibleToUser
 import com.jdp.drivescoretechnicaltest.yourcreditscore.ui.viewmodel.YourCreditScoreUIState
+import com.jdp.drivescoretechnicaltest.yourcreditscore.util.TestTag
 
 @Composable
 fun YourCreditScoreSuccessScreen(
@@ -64,6 +65,7 @@ private fun Doughnut(
         contentAlignment = Alignment.Center,
         modifier = Modifier
             .size(size = 300.dp)
+            .testTag(tag = TestTag.YOUR_CREDIT_SCORE_DOUGHNUT)
             .semantics {
                 contentDescription = doughnutAccessibilityDescription
             }

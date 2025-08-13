@@ -6,6 +6,8 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import com.jdp.drivescoretechnicaltest.yourcreditscore.util.TestTag
 
 @Composable
 fun YourCreditScoreLoadingScreen(
@@ -15,6 +17,8 @@ fun YourCreditScoreLoadingScreen(
         contentAlignment = Alignment.Center,
         modifier = modifier.fillMaxSize()
     ) {
-        CircularProgressIndicator()
+        CircularProgressIndicator(
+            modifier = Modifier.testTag(tag = TestTag.YOUR_CREDIT_SCORE_PROGRESS_SPINNER)
+        )
     }
 }
