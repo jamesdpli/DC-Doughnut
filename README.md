@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a technical test implementation for **Drive Score**, demonstrating modern Android app architecture, best practices, and fully tested features using Kotlin and Jetpack Compose. Developed in Android Studio Narwhal 2025.1.2.
+This project is a technical test implementation for **Drive Score**, developed in Android Studio Narwhal 2025.1.2, demonstrating modern Android app architecture, best practices, and fully tested features using Kotlin and Jetpack Compose.
 
 ---
 
@@ -54,8 +54,27 @@ You can run the tests without opening Android Studio using Gradle commands:
 ```bash
 ./gradlew testDebugUnitTest
 ```
+
+### UI Tests
 ```bash
 ./gradlew connectedDebugAndroidTest
 ```
 
+These commands will execute all tests for the debug variant.
 
+---
+
+## Testing
+
+- Unit tests cover repositories, view models, and MVI state logic.
+- UI tests cover error, loading and success cases.
+- CI workflow runs all unit and UI tests automatically on push.
+
+---
+
+## Notes
+
+- Fully reactive **MVI architecture** ensures a clean and maintainable codebase.
+- All scenarios, including loading, error, and empty states, are thoroughly tested.
+- I have added custom accessibility for the Doughnut composable in [YourCreditScoreSuccessScreen.kt](app/src/main/java/com/jdp/drivescoretechnicaltest/yourcreditscore/ui/composable/YourCreditScoreSuccessScreen.kt).
+- I have added a workflow file that runs unit and UI tests automatically.
