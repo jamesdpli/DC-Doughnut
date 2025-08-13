@@ -53,5 +53,9 @@ You can run the tests without opening Android Studio using Gradle commands:
 ### Unit Tests
 ```bash
 ./gradlew testDebugUnitTest
+```
+```bash
 ./gradlew connectedDebugAndroidTest
+```
+
 
