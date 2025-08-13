@@ -5,7 +5,8 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.jdp.drivescoretechnicaltest.core.theme.DriveScoreTechnicalTestTheme
-import com.jdp.drivescoretechnicaltest.yourcreditscore.ui.composable.YourCreditScoreErrorScreen
+import com.jdp.drivescoretechnicaltest.yourcreditscore.ui.composable.YourCreditScoreScreen
+import com.jdp.drivescoretechnicaltest.yourcreditscore.ui.viewmodel.YourCreditScoreUIState
 import com.jdp.drivescoretechnicaltest.yourcreditscore.util.TestTag.YOUR_CREDIT_SCORE_ERROR_CARD
 import com.jdp.drivescoretechnicaltest.yourcreditscore.util.TestTag.YOUR_CREDIT_SCORE_ERROR_TRY_AGAIN_BUTTON
 import org.junit.Rule
@@ -18,10 +19,13 @@ class YourCreditScoreErrorScreenTest {
     val composeTestRule = createComposeRule()
 
     @Test
-    fun your_credit_score_error_screen_test() {
+    fun given_UI_state_is_error_when_screen_displayed_then_expect_UI_elements_shown() {
         composeTestRule.setContent {
             DriveScoreTechnicalTestTheme {
-                YourCreditScoreErrorScreen(intentHandler = {})
+                YourCreditScoreScreen(
+                    uiState = YourCreditScoreUIState.Error,
+                    intentHandler = {}
+                )
             }
         }
         with(receiver = composeTestRule) {
