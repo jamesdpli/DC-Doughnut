@@ -76,5 +76,12 @@ These commands will execute all tests for the debug variant.
 
 - Fully reactive **MVI architecture** ensures a clean and maintainable codebase.
 - All scenarios, including loading, error, and empty states, are thoroughly tested.
-- I have added custom accessibility for the Doughnut composable in [YourCreditScoreSuccessScreen.kt](app/src/main/java/com/jdp/drivescoretechnicaltest/yourcreditscore/ui/composable/YourCreditScoreSuccessScreen.kt).
+- I have added custom accessibility for the Doughnut composable in [YourCreditScoreSuccessScreen.kt](app/src/main/java/com/jdp/drivescoretechnicaltest/yourcreditscore/ui/composable/YourCreditScoreSuccessScreen.kt). I have tested the correct accessibility string is formed in the UI test section.
 - I have added a workflow file that runs unit and UI tests automatically.
+  
+---
+
+## Looking Forward
+- Animate the inner line of the doughnut chart.
+- Ensure TalkBack focuses on the top app bar automatically.
+- Modularize the doughnut feature into its own package for reusability.
