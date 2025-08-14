@@ -16,7 +16,7 @@ class YourCreditScoreRepositoryModule {
 
     @Provides
     @Singleton
-    fun provideOpenFoodsRepository(
+    fun provideYourCreditScoreRepository(
         mapper: YourCreditScoreNetworkResponseMapper,
         service: YourCreditScoreService
     ): YourCreditScoreRepository = YourCreditScoreRepositoryImpl(

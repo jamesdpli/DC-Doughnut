@@ -29,6 +29,6 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOpenFoodsService(retrofit: Retrofit): YourCreditScoreService = retrofit
+    fun provideYourCreditScoreService(retrofit: Retrofit): YourCreditScoreService = retrofit
         .create(YourCreditScoreService::class.java)
 }
