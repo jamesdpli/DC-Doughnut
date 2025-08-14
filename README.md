@@ -62,6 +62,6 @@ These commands will execute all tests for the debug variant.
 - Ensure TalkBack automatically focuses on the top app bar.
 - Modularize the `yourcreditscore` package into a separate feature module for reusability and
   maintainability.
-- Keep the sealed interface for UI state and user intents in `YourCreditScoreViewModel.kt` due to
-  their small size, improving readability.
+- I have kept the sealed interface for UI state and user intents in `YourCreditScoreViewModel.kt` due to
+  their small size, improving readability. In the future these can live in separate files.
 
