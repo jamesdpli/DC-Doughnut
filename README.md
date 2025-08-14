@@ -22,9 +22,9 @@ This project is a technical test implementation for **Drive Score**, developed i
 - **Repository pattern** with a single source of truth for clean and consistent data handling.
 - **Dependency Injection** via **Dagger Hilt**.
 - **Modern UI** built with **Jetpack Compose**.
-- **Navigation Compose** with **Kotlin Serialization** for type-safe navigation arguments.
+- **Navigation Compose** with **Kotlin Serialization**.
 - Fully tested:
-    - **Unit tests** (`JUnit`, `MockK`, `Turbine`) for repositories, view models, and MVI state
+    - **Unit tests** (`JUnit`, `MockK`, `Turbine`) for repositories, view models and mappers.
       logic.
     - **UI tests** for loading, success, and error scenarios.
 - CI workflow runs all tests automatically on push.
@@ -32,17 +32,11 @@ This project is a technical test implementation for **Drive Score**, developed i
 ---
 
 ## Testing
-
-- Unit tests cover repositories, view models, and MVI state logic.
-- UI tests cover error, loading and success cases.
-- CI workflow runs all unit and UI tests automatically on push.
-
+Unit Tests
 ```bash
 ./gradlew testDebugUnitTest
 ```
-
-### UI Tests (A device must be connected)
-
+UI Tests (A device must be connected)
 ```bash
 ./gradlew connectedDebugAndroidTest
 ```
