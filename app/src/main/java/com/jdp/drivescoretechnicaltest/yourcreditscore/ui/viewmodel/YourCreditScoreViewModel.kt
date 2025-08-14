@@ -43,6 +43,7 @@ class YourCreditScoreViewModel @Inject constructor(
     }
 
     private fun getCreditScore() = viewModelScope.launch {
+        _uiState.update { YourCreditScoreUIState.Loading }
         when (val response = getCreditScoreUseCase()) {
             is Resource.Success -> {
                 _uiState.update {
